@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Completa de Menorca</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .header h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+        
+        .header p {
+            color: #7f8c8d;
+            font-size: 1.2em;
+        }
+        
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        
+        .attractions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .attraction-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            border-left: 4px solid #3498db;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .attraction-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(52, 152, 219, 0.2);
+        }
+        
+        .attraction-card h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        
+        .attraction-card p {
+            color: #5a6c7d;
+            font-size: 0.95em;
+        }
+        
+        .beaches-section {
+            background: linear-gradient(135deg, #74b9ff, #0984e3);
+            color: white;
+        }
+        
+        .beaches-section h2 {
+            color: white;
+            border-bottom-color: rgba(255,255,255,0.3);
+        }
+        
+        .beach-category {
+            margin-bottom: 25px;
+        }
+        
+        .beach-category h3 {
+            color: #ddd;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        
+        .beach-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .beach-tag {
+            background: rgba(255,255,255,0.2);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            backdrop-filter: blur(5px);
+        }
+        
+        .map-container {
+            height: 400px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .tips-section {
+            background: linear-gradient(135deg, #fd79a8, #fdcb6e);
+            color: white;
+        }
+        
+        .tips-section h2 {
+            color: white;
+            border-bottom-color: rgba(255,255,255,0.3);
+        }
+        
+        .tip-item {
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            backdrop-filter: blur(5px);
+        }
+        
+        .highlight {
+            background: linear-gradient(135deg, #a29bfe, #6c5ce7);
+            color: white;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .section {
+                padding: 20px;
+            }
+            
+            .attractions-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏝️ Guía Completa de Menorca</h1>
+            <p>Descubre los tesoros de la isla más auténtica del Mediterráneo</p>
+        </div>
+        
+        <div class="section">
+            <h2>📍 Mapa de Menorca - Lugares Destacados</h2>
+            <div class="map-container">
+                <svg viewBox="0 0 800 600" style="width: 100%; height: 100%; background: linear-gradient(135deg, #74b9ff, #0984e3);">
+                    <!-- Silueta de Menorca -->
+                    <path d="M150 200 Q200 180 280 190 Q350 200 420 210 Q500 220 580 240 Q620 260 650 300 Q670 340 650 380 Q620 420 580 450 Q500 470 420 480 Q350 485 280 480 Q200 475 150 460 Q100 440 80 400 Q60 360 80 320 Q100 280 120 240 Q130 220 150 200 Z" fill="rgba(255,255,255,0.9)" stroke="#2c3e50" stroke-width="2"/>
+                    
+                    <!-- Ciudades principales -->
+                    <circle cx="580" cy="320" r="8" fill="#e74c3c"/>
+                    <text x="590" y="325" font-size="12" font-weight="bold" fill="#2c3e50">Mahón</text>
+                    
+                    <circle cx="200" cy="350" r="8" fill="#e74c3c"/>
+                    <text x="210" y="355" font-size="12" font-weight="bold" fill="#2c3e50">Ciudadella</text>
+                    
+                    <!-- Monte Toro -->
+                    <polygon points="350,280 360,260 370,280" fill="#8B4513"/>
+                    <text x="375" y="275" font-size="10" font-weight="bold" fill="#2c3e50">Monte Toro</text>
+                    
+                    <!-- Fornells -->
+                    <circle cx="420" cy="220" r="6" fill="#3498db"/>
+                    <text x="430" y="225" font-size="10" font-weight="bold" fill="#2c3e50">Fornells</text>
+                    
+                    <!-- Binibeca -->
+                    <circle cx="520" cy="420" r="5" fill="#9b59b6"/>
+                    <text x="530" y="425" font-size="10" font-weight="bold" fill="#2c3e50">Binibeca</text>
+                    
+                    <!-- Cala Galdana (tu hotel) -->
+                    <circle cx="300" cy="400" r="10" fill="#f39c12" stroke="#e67e22" stroke-width="3"/>
+                    <text x="320" y="405" font-size="12" font-weight="bold" fill="#2c3e50">🏨 Cala Galdana</text>
+                    
+                    <!-- Calas del Sur -->
+                    <circle cx="280" cy="420" r="5" fill="#1abc9c"/>
+                    <text x="290" y="440" font-size="9" fill="#2c3e50">Macarella</text>
+                    
+                    <circle cx="320" cy="430" r="4" fill="#1abc9c"/>
+                    <text x="330" y="440" font-size="9" fill="#2c3e50">Macarelleta</text>
+                    
+                    <circle cx="360" cy="440" r="4" fill="#1abc9c"/>
+                    <text x="370" y="450" font-size="9" fill="#2c3e50">Turqueta</text>
+                    
+                    <circle cx="400" cy="450" r="4" fill="#1abc9c"/>
+                    <text x="410" y="460" font-size="9" fill="#2c3e50">Son Saura</text>
+                    
+                    <circle cx="350" cy="460" r="4" fill="#1abc9c"/>
+                    <text x="360" y="470" font-size="9" fill="#2c3e50">Cala Mitjana</text>
+                    
+                    <circle cx="480" cy="460" r="4" fill="#1abc9c"/>
+                    <text x="490" y="470" font-size="9" fill="#2c3e50">Cala en Porter</text>
+                    
+                    <circle cx="550" cy="450" r="4" fill="#1abc9c"/>
+                    <text x="560" y="460" font-size="9" fill="#2c3e50">Punta Prima</text>
+                    
+                    <!-- Calas del Norte -->
+                    <circle cx="380" cy="200" r="5" fill="#2ecc71"/>
+                    <text x="390" y="205" font-size="9" fill="#2c3e50">Cala Pregonda</text>
+                    
+                    <circle cx="460" cy="190" r="4" fill="#2ecc71"/>
+                    <text x="470" y="195" font-size="9" fill="#2c3e50">S'Arenal</text>
+                    
+                    <circle cx="320" cy="180" r="4" fill="#2ecc71"/>
+                    <text x="330" y="175" font-size="9" fill="#2c3e50">Cala Pilar</text>
+                    
+                    <!-- Faros -->
+                    <polygon points="500,170 510,150 520,170" fill="#f1c40f"/>
+                    <text x="525" y="165" font-size="9" fill="#2c3e50">Faro Favaritx</text>
+                    
+                    <polygon points="280,160 290,140 300,160" fill="#f1c40f"/>
+                    <text x="305" y="155" font-size="9" fill="#2c3e50">Faro Cavalleria</text>
+                    
+                    <!-- Fortaleza de la Mola -->
+                    <rect x="620" y="300" width="12" height="12" fill="#34495e"/>
+                    <text x="635" y="310" font-size="9" fill="#2c3e50">Fortaleza Mola</text>
+                    
+                    <!-- Cales Coves -->
+                    <circle cx="540" cy="400" r="4" fill="#95a5a6"/>
+                    <text x="550" y="405" font-size="9" fill="#2c3e50">Cales Coves</text>
+                    
+                    <!-- Cova den Xoroi -->
+                    <circle cx="500" cy="440" r="4" fill="#8e44ad"/>
+                    <text x="510" y="445" font-size="9" fill="#2c3e50">Cova den Xoroi</text>
+                    
+                    <!-- Restaurantes destacados -->
+                    <circle cx="420" cy="230" r="6" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+                    <text x="430" y="235" font-size="10" font-weight="bold" fill="#2c3e50">🍽️ Es Cranc</text>
+                    
+                    <circle cx="300" cy="410" r="5" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+                    <text x="310" y="415" font-size="10" font-weight="bold" fill="#2c3e50">🍽️ Cala Mitjana</text>
+                    
+                    <circle cx="430" cy="240" r="4" fill="#e74c3c"/>
+                    <text x="440" y="245" font-size="9" fill="#2c3e50">🍽️ Sa Llagosta</text>
+                    
+                    <circle cx="460" cy="200" r="4" fill="#e74c3c"/>
+                    <text x="470" y="205" font-size="9" fill="#2c3e50">🍽️ Restaurante Alcalde</text>
+                    
+                    <circle cx="380" cy="210" r="4" fill="#e74c3c"/>
+                    <text x="390" y="215" font-size="9" fill="#2c3e50">🍽️ Binimel·là</text>
+                    
+                    <!-- Leyenda -->
+                    <g transform="translate(50, 480)">
+                        <rect x="0" y="0" width="300" height="110" fill="rgba(255,255,255,0.9)" stroke="#2c3e50" stroke-width="1" rx="5"/>
+                        <text x="10" y="20" font-size="12" font-weight="bold" fill="#2c3e50">Leyenda</text>
+                        
+                        <circle cx="20" cy="35" r="4" fill="#e74c3c"/>
+                        <text x="30" y="39" font-size="10" fill="#2c3e50">Ciudades principales</text>
+                        
+                        <circle cx="20" cy="50" r="4" fill="#f39c12"/>
+                        <text x="30" y="54" font-size="10" fill="#2c3e50">Tu hotel (Cala Galdana)</text>
+                        
+                        <circle cx="20" cy="65" r="4" fill="#1abc9c"/>
+                        <text x="30" y="69" font-size="10" fill="#2c3e50">Calas del Sur</text>
+                        
+                        <circle cx="20" cy="80" r="4" fill="#2ecc71"/>
+                        <text x="30" y="84" font-size="10" fill="#2c3e50">Calas del Norte</text>
+                        
+                        <circle cx="20" cy="95" r="4" fill="#e74c3c" stroke="#c0392b" stroke-width="1"/>
+                        <text x="30" y="99" font-size="10" fill="#2c3e50">Restaurantes destacados</text>
+                        
+                        <circle cx="170" cy="35" r="4" fill="#9b59b6"/>
+                        <text x="180" y="39" font-size="10" fill="#2c3e50">Pueblos pintorescos</text>
+                        
+                        <polygon points="170,45 175,40 180,45" fill="#f1c40f"/>
+                        <text x="185" y="45" font-size="10" fill="#2c3e50">Faros</text>
+                        
+                        <polygon points="170,55 175,50 180,55" fill="#8B4513"/>
+                        <text x="185" y="55" font-size="10" fill="#2c3e50">Monte Toro</text>
+                        
+                        <rect x="170" y="65" width="8" height="8" fill="#34495e"/>
+                        <text x="185" y="72" font-size="10" fill="#2c3e50">Fortalezas</text>
+                        
+                        <circle cx="174" cy="85" r="4" fill="#8e44ad"/>
+                        <text x="185" y="89" font-size="10" fill="#2c3e50">Cuevas/Atracciones</text>
+                    </g>
+                </svg>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>🌟 Lugares Imprescindibles</h2>
+            <div class="attractions-grid">
+                <div class="attraction-card">
+                    <h3>🏔️ Monte Toro</h3>
+                    <p>El punto más alto de la isla con <span class="highlight">panorámica espectacular</span> de toda Menorca. Ideal para atardeceres únicos.</p>
+                </div>
+                
+                <div class="attraction-card">
+                    <h3>🏰 Fortaleza de la Mola</h3>
+                    <p>Excursión histórica con coches de golf, cascos y folletos explicativos. También disponible con guía profesional.</p>
+                </div>
+                
+                <div class="attraction-card">
+                    <h3>🏘️ Binibeca</h3>
+                    <p>Pueblo pesquero de <span class="highlight">visita obligada</span>, con arquitectura tradicional menorquina de postal.</p>
+                </div>
+                
+                <div class="attraction-card">
+                    <h3>🌊 Cova den Xoroi</h3>
+                    <p>Bar único en una cueva natural con vistas al mar. Perfecto para tardes relajadas o ambiente nocturno.</p>
+                </div>
+                
+                <div class="attraction-card">
+                    <h3>🗿 Cales Coves</h3>
+                    <p>Cuevas protegidas con historia hippie. Menos masificado temprano en la mañana.</p>
+                </div>
+                
+                <div class="attraction-card">
+                    <h3>🏛️ Isla del Lazareto</h3>
+                    <p>Antigua estación de cuarentena convertida en museo. Acceso en barco desde Mahón.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>🏨 Tu Base: Cala Galdana</h2>
+            <div class="attractions-grid">
+                <div class="attraction-card">
+                    <h3>🏖️ Cala Galdana</h3>
+                    <p>Tu ubicación perfecta en el sur de la isla. Playa con <span class="highlight">servicios completos</span> y punto de partida ideal para explorar las calas más famosas.</p>
+                </div>
+                
+                <div class="attraction-card">
+                    <h3>🥾 Desde tu hotel</h3>
+                    <p>Puedes caminar hasta <span class="highlight">Macarella y Macarelleta</span> por sendero costero. También hay excursiones en kayak por las cuevas marinas cercanas.</p>
+                </div>
+            </div>
+        </div>
+            <div class="attractions-grid">
+                <div class="attraction-card">
+                    <h3>⚓ Mahón</h3>
+                    <p>Capital de la isla con el <span class="highlight">puerto natural más grande</span> del Mediterráneo. Entrada espectacular si llegas en barco.</p>
+                </div>
+                
+                <div class="attraction-card">
+                    <h3>🌅 Ciudadella</h3>
+                    <p>Antigua capital con casco histórico medieval. Perfecta para paseos vespertinos y compras.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section beaches-section">
+            <h2>🏖️ Las Mejores Calas y Playas</h2>
+            
+            <div class="beach-category">
+                <h3>🌊 Calas del Sur (más protegidas)</h3>
+                <div class="beach-list">
+                    <div class="beach-tag">Cala Galdana 🏨</div>
+                    <div class="beach-tag">Macarella</div>
+                    <div class="beach-tag">Macarelleta</div>
+                    <div class="beach-tag">Cala en Turqueta</div>
+                    <div class="beach-tag">Son Saura</div>
+                    <div class="beach-tag">Cala Mitjana</div>
+                    <div class="beach-tag">Punta Prima</div>
+                    <div class="beach-tag">Cala en Porter</div>
+                </div>
+            </div>
+            
+            <div class="beach-category">
+                <h3>🏔️ Calas del Norte (más salvajes)</h3>
+                <div class="beach-list">
+                    <div class="beach-tag">Cala Pregonda ⭐</div>
+                    <div class="beach-tag">S'Arenal</div>
+                    <div class="beach-tag">Cala Pilar</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>🚣 Actividades y Deportes</h2>
+            <div class="attractions-grid">
+                <div class="attraction-card">
+                    <h3>🛶 Kayak en Fornells</h3>
+                    <p>Excursión en la bahía de Fornells con <span class="highlight">snorkel incluido</span>. Recomendación: llevar gafas del Decathlon.</p>
+                </div>
+                
+                <div class="attraction-card">
+                    <h3>🏔️ Kayak por las Cuevas del Sur</h3>
+                    <p>Excursión desde Cala Galdana explorando las <span class="highlight">cuevas marinas</span> de la zona sur. Una experiencia única para descubrir rincones escondidos.</p>
+                </div>
+                
+                <div class="attraction-card">
+                    <h3>🥾 Excursión Cala Galdana - Macarella</h3>
+                    <p>Ruta de senderismo desde Cala Galdana hasta <span class="highlight">Macarella y Macarelleta</span>. Camino costero con vistas espectaculares.</p>
+                </div>
+                
+                <div class="attraction-card">
+                    <h3>🤿 Snorkel en Cala Pregonda</h3>
+                    <p>Una de las mejores zonas para explorar el fondo marino de Menorca.</p>
+                </div>
+                
+                <div class="attraction-card">
+                    <h3>🗼 Visita a Faros</h3>
+                    <p>Excursiones a varios faros de la isla, incluido Favaritx. Perfectos para fotografía.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>🍽️ Restaurantes Recomendados</h2>
+            <div class="attractions-grid">
+                <div class="attraction-card">
+                    <h3>🍤 Restaurante Cala Mitjana</h3>
+                    <p>Ubicado en Cala Galdana, <span class="highlight">altamente recomendado</span>. Perfecto para disfrutar de la gastronomía local con vistas al mar.</p>
+                </div>
+                
+                <div class="attraction-card">
+                    <h3>🦞 Es Cranc - Fornells</h3>
+                    <p>El <span class="highlight">más famoso restaurante de Menorca</span> según locales. Especializado en caldereta de langosta y cocina tradicional menorquina.</p>
+                </div>
+                
+                <div class="attraction-card">
+                    <h3>🦞 Sa Llagosta - Fornells</h3>
+                    <p>Considerado uno de los mejores lugares para disfrutar de una <span class="highlight">langosta de calidad</span> en el paseo marítimo de Fornells.</p>
+                </div>
+                
+                <div class="attraction-card">
+                    <h3>🌊 Restaurante Alcalde - Arenal d'en Castell</h3>
+                    <p>Cerca de S'Arenal, con <span class="highlight">vistas fantásticas</span> y excelente servicio. Cocina mediterránea y paellas exquisitas.</p>
+                </div>
+                
+                <div class="attraction-card">
+                    <h3>🏖️ Restaurante Binimel·là</h3>
+                    <p>Ubicado cerca de Cala Pregonda, perfecto para una comida después de visitar esta cala única de arena rojiza.</p>
+                </div>
+            </div>
+        </div>
+            <div class="attractions-grid">
+                <div class="attraction-card">
+                    <h3>👜 Artículos de Piel</h3>
+                    <p>Almacenes cerca de Ciudadella con <span class="highlight">buenos precios</span> y gran variedad.</p>
+                </div>
+                
+                <div class="attraction-card">
+                    <h3>👠 Calzado Local</h3>
+                    <p>Fábricas de Ría y Pretty Ballerinas en polígono industrial.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section tips-section">
+            <h2>💡 Consejos Prácticos</h2>
+            <div class="tip-item">
+                <strong>🚗 Transporte:</strong> Alquilar coche es imprescindible para moverse por la isla con libertad.
+            </div>
+            <div class="tip-item">
+                <strong>⏰ Mejor momento:</strong> Visitar calas temprano en la mañana o al atardecer para evitar multitudes.
+            </div>
+            <div class="tip-item">
+                <strong>🥽 Equipamiento:</strong> Llevar material de snorkel propio para disfrutar mejor del fondo marino.
+            </div>
+            <div class="tip-item">
+                <strong>📱 Reservas:</strong> Cova den Xoroi puede requerir reserva en temporada alta.
+            </div>
+            <div class="tip-item">
+                <strong>🏨 Desde Cala Galdana:</strong> Estás en la ubicación perfecta para explorar las calas del sur. Macarella y Macarelleta están a distancia de caminata.
+            </div>
+            <div class="tip-item">
+                <strong>🏖️ Recomendación:</strong> Como no podrás ver todo, selecciona 2-3 calas por día para disfrutarlas sin prisas.
+            </div>
+        </div>
+        
+        <div class="section">
+            <p style="text-align: center; color: #7f8c8d; font-style: italic;">
+                "Esta guía incluye solo algunas de las miles de cosas que puedes hacer en Menorca. ¡Que disfrutes de esta isla mágica!"
+            </p>
+        </div>
+    </div>
+</body>
+</html>
